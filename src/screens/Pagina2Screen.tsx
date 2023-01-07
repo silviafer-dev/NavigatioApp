@@ -1,5 +1,5 @@
 import {useNavigation} from '@react-navigation/native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Text, View, Button} from 'react-native';
 import {styles} from '../theme/appTheme';
 
@@ -13,10 +13,16 @@ type StackParamList = {
 export const Pagina2Screen = () => {
   const navigation = useNavigation<StackNavigationProp<StackParamList>>();
 
+  useEffect(() => {
+    navigation.setOptions({
+      title: 'Hola Mundo',
+      headerBackTitle: 'Atrás', // para IOS, tambien string vacío
+    });
+  }, []);
 
   return (
     <View style={styles.globalMargin}>
-      <Text>Pagina 2</Text>
+      <Text style={styles.title}>Pagina 2</Text>
 
       <Button
         title="Ir a pagina 3"
