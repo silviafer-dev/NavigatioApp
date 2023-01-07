@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import {StackScreenProps} from '@react-navigation/stack';
 import React from 'react';
 import {Button, Text, View} from 'react-native';
@@ -16,12 +17,24 @@ export const Pagina1Screen = ({navigation}: Props) => {
         onPress={() => navigation.navigate('Pagina2Screen')}
       />
       <Text>Navegar con argumentos</Text>
-      <TouchableOpacity
-        onPress={() =>
-          navigation.navigate('PersonaScreen', {id: 1, nombre: 'Pedro'})
-        }>
-        <Text>Pedro</Text>
-      </TouchableOpacity>
+
+      <View style={{flexDirection: 'row'}}>
+        <TouchableOpacity
+          style={{...styles.botonGrande, backgroundColor: '#5856D6'}}
+          onPress={() =>
+            navigation.navigate('PersonaScreen', {id: 1, nombre: 'Pedro'})
+          }>
+          <Text style={styles.botonGrandeTexto}>Pedro</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={{...styles.botonGrande, backgroundColor: '#FF9427'}}
+          onPress={() =>
+            navigation.navigate('PersonaScreen', {id: 2, nombre: 'María'})
+          }>
+          <Text style={styles.botonGrandeTexto}>María</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
