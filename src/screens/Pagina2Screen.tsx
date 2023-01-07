@@ -18,7 +18,7 @@ export const Pagina2Screen = () => {
       title: 'Hola Mundo',
       headerBackTitle: 'Atrás', // para IOS, tambien string vacío
     });
-  }, []);
+  }, [navigation]);
 
   return (
     <View style={styles.globalMargin}>
