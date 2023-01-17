@@ -38,7 +38,8 @@ export const styles = StyleSheet.create({
   menuContainer: {
     marginVertical: 30,
     marginHorizontal: 20,
-    alignItems: 'center',
+    display: 'flex',
+    justifyContent: 'space-between',
   },
   menuBoton: {
     marginVertical: 10,
