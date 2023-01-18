@@ -8,17 +8,19 @@ import {AuthProvider} from './src/context/AuthContext';
 // import {StackNavigator} from './src/navigator/StackNavigator';
 
 const App = () => {
+
   return (
     <NavigationContainer>
       <AppState>
         {/* <MenuLateralBasico /> */}
-        <MenuLateral />
         {/* <Tabs /> */}
+        <MenuLateral />
       </AppState>
     </NavigationContainer>
   );
 };
-// ({children}: {children: JSX.Element})
+
+//tipado children:  ({children}: {children: JSX.Element})
 const AppState = ({children}: any) => {
   return <AuthProvider>{children}</AuthProvider>;
 };
