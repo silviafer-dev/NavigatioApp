@@ -47,9 +47,21 @@ export const TopTabNavigator = () => {
           return <Icon name={iconName} size={25} color={colors.primary} />;
         },
       })}>
-      <Tab.Screen name="ChatScreen" component={ChatScreen} />
-      <Tab.Screen name="ContactScreen" component={ContactScreen} />
-      <Tab.Screen name="AlbumsScreens" component={AlbumsScreens} />
+      <Tab.Screen
+        name="ChatScreen"
+        options={{title: 'Chat '}}
+        component={ChatScreen}
+      />
+      <Tab.Screen
+        name="ContactScreen"
+        options={{title: 'Contact'}}
+        component={ContactScreen}
+      />
+      <Tab.Screen
+        name="AlbumsScreens"
+        options={{title: 'Albums'}}
+        component={AlbumsScreens}
+      />
     </Tab.Navigator>
   );
 };

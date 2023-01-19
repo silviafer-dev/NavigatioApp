@@ -1,11 +1,11 @@
 import React from 'react';
-import {View} from 'react-native';
-import {Text} from 'react-native-paper';
+import {View, Text} from 'react-native';
+import {styles} from '../theme/appTheme';
 
 export const ChatScreen = () => {
   return (
-    <View>
-      <Text>ChatScreen</Text>
+    <View style={styles.globalMargin}>
+      <Text style={styles.title}>Chat Screen</Text>
     </View>
   );
 };
